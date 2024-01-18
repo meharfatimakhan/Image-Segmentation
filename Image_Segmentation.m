@@ -1,26 +1,26 @@
-function varargout = Assignment3(varargin)
-% ASSIGNMENT3 MATLAB code for Assignment3.fig
-%      ASSIGNMENT3, by itself, creates a new ASSIGNMENT3 or raises the existing
+function varargout = Image_Segmentation(varargin)
+% Image_Segmentation MATLAB code for Image_Segmentation.fig
+%      Image_Segmentation, by itself, creates a new Image_Segmentation or raises the existing
 %      singleton*.
 %
-%      H = ASSIGNMENT3 returns the handle to a new ASSIGNMENT3 or the handle to
+%      H = Image_Segmentation returns the handle to a new Image_Segmentation or the handle to
 %      the existing singleton*.
 %
-%      ASSIGNMENT3('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in ASSIGNMENT3.M with the given input arguments.
+%      Image_Segmentation('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in Image_Segmentation.M with the given input arguments.
 %
-%      ASSIGNMENT3('Property','Value',...) creates a new ASSIGNMENT3 or raises the
+%      Image_Segmentation('Property','Value',...) creates a new Image_Segmentation or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before Assignment3_OpeningFcn gets called.  An
+%      applied to the GUI before Image_Segmentation_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to Assignment3_OpeningFcn via varargin.
+%      stop.  All inputs are passed to Image_Segmentation_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help Assignment3
+% Edit the above text to modify the response to help Image_Segmentation
 
 % Last Modified by GUIDE v2.5 19-Nov-2019 02:58:32
 
@@ -28,8 +28,8 @@ function varargout = Assignment3(varargin)
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @Assignment3_OpeningFcn, ...
-                   'gui_OutputFcn',  @Assignment3_OutputFcn, ...
+                   'gui_OpeningFcn', @Image_Segmentation_OpeningFcn, ...
+                   'gui_OutputFcn',  @Image_Segmentation_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -44,8 +44,8 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before Assignment3 is made visible.
-function Assignment3_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before Image_Segmentation is made visible.
+function Image_Segmentation_OpeningFcn(hObject, eventdata, handles, varargin)
 global image1;
 image1=imread('puma.jpg');
 axes(handles.axes1);
@@ -62,20 +62,20 @@ global getObj;
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to Assignment3 (see VARARGIN)
+% varargin   command line arguments to Image_Segmentation (see VARARGIN)
 
-% Choose default command line output for Assignment3
+% Choose default command line output for Image_Segmentation
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes Assignment3 wait for user response (see UIRESUME)
+% UIWAIT makes Image_Segmentation wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = Assignment3_OutputFcn(hObject, eventdata, handles) 
+function varargout = Image_Segmentation_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
